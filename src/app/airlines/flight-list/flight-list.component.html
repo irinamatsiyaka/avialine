@@ -1,0 +1,15 @@
+<h3>Список рейсов</h3>
+<div *ngFor="let flight of flights">
+  <!-- Здесь важно передавать UUID, а не числовой id -->
+  <a [routerLink]="['/flights', flight.uuid]" class="flight-link">
+    {{ flight.data.from }} - {{ flight.data.to }} ({{ flight.data.date }})
+  </a>
+  <button [routerLink]="['/flights/edit', flight.uuid]" class="edit-button">
+    ✏️
+  </button>
+  <button (click)="deleteFlight(flight.uuid)" class="delete-button">🗑️</button>
+</div>
+
+<button routerLink="/flights/add" class="add-button">Добавить рейс</button>
+
+<router-outlet></router-outlet>

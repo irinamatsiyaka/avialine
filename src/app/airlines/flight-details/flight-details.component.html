@@ -1,0 +1,8 @@
+<div *ngIf="flight">
+  <h3>Flight Details</h3>
+  <p><strong>From:</strong> {{ flight.data.from }}</p>
+  <p><strong>To:</strong> {{ flight.data.to }}</p>
+  <p><strong>Date:</strong> {{ flight.data.date }}</p>
+  <p><strong>Luggage:</strong> {{ flight.data.luggage }} kg</p>
+  <p><strong>Price:</strong> ${{ flight.data.price }}</p>
+</div>
